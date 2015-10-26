@@ -1,6 +1,8 @@
 (function () {
   'use strict';
 
+  /* eslint no-console: 0*/
+
   Class(App.Systems, 'ConfigurationLogger').inherits(Serpentity.System)({
     prototype : {
       configurables : null,
