@@ -117,7 +117,7 @@
           }
         ],
         files: [
-          '/samples/test.mp3'
+          '/samples/trigger/zombie.mp3'
         ]
       });
 
@@ -161,7 +161,7 @@
           }
         ],
         files: [
-          '/samples/test.mp3'
+          '/samples/bg/rain-night.mp3'
         ]
       }).then(function (entity) {
         window.entity = entity;
