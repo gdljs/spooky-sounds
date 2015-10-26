@@ -2,6 +2,32 @@
   'use strict';
 
   /**
+ * ## What is a MIDI Map object?
+ *
+ * A midi map object is an array of objects that have a `source` and
+ * a `target`. The values of the source will be set to the values
+ * of the target. Every individual entry of the array looks like this:
+ *
+ * ```
+ * {
+ *   source: {
+ *     controller: <string> the name of the controller to use,
+ *                 as it shows in midi access,
+ *     channel: <number> the channel to listen for,
+ *     note: <number> the note in the channel that contains the value
+ *   },
+ *   target: {
+ *     component: <Serpentity.Component> a reference to the class of the type
+ *                of component, (eg. `Serpentity.Contrib.Components.Config`),
+ *     key: <string> the key path, separated by periods of the key to
+ *          write( eg. `config.example.path`),
+ *     value: [<function>] an optional function that will be applied to the
+ *            midi value before being assigned
+ *   }
+ * }
+ * ```
+
+  /**
    * Given a set of midi access objects, and given a set of entities
    * with midi maps, assign values to the maps accordingly.
    */
