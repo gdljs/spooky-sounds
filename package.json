@@ -1,0 +1,27 @@
+{
+  "name": "spooky-sounds",
+  "version": "0.0.0",
+  "description": "A spooky soundboard tool",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rbdr/spooky-sounds.git"
+  },
+  "keywords": [
+    "midi",
+    "spooky",
+    "sound"
+  ],
+  "author": "Ruben Beltran del Rio",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/rbdr/spooky-sounds/issues"
+  },
+  "homepage": "https://github.com/rbdr/spooky-sounds",
+  "dependencies": {
+    "serpentity": "0.1.x",
+    "serpentity-contrib": "0.1.x"
+  }
+}
