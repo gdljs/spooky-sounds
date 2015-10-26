@@ -3,6 +3,9 @@
 
   /* eslint no-console: 0*/
 
+  /**
+   * Takes a collection of configurable objects, and logs their configuration.
+   */
   Class(App.Systems, 'ConfigurationLogger').inherits(Serpentity.System)({
     prototype : {
       configurables : null,

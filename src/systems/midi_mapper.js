@@ -1,6 +1,10 @@
 (function () {
   'use strict';
 
+  /**
+   * Given a set of midi access objects, and given a set of entities
+   * with midi maps, assign values to the maps accordingly.
+   */
   Class(App.Systems, 'MIDIMapper').inherits(Serpentity.System)({
     prototype : {
       midiAccess : null,

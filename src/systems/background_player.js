@@ -1,6 +1,11 @@
 (function () {
   'use strict';
 
+  /**
+   * Given an object with a file bank and a playable state, it will
+   * start loop if armed and not playing. It will stop loop if armed and
+   * playing.
+   */
   Class(App.Systems, 'BackgroundPlayer').inherits(Serpentity.System)({
     prototype : {
       samples : null,

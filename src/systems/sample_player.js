@@ -1,6 +1,10 @@
 (function () {
   'use strict';
 
+  /*
+   * Given a set of objects with triggers and an audio bank,
+   * play the sound if triggered.
+   */
   Class(App.Systems, 'SamplePlayer').inherits(Serpentity.System)({
     prototype : {
       samples : null,
@@ -28,7 +32,7 @@
       },
 
       /*
-       * Plays a sample.
+       * Plays a sample by creating the buffer source and attaching nodes.
        */
       _playSample : function _playSample(sample) {
         var source, panNode;
