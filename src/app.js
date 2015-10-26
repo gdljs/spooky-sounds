@@ -1,15 +1,23 @@
 (function () {
   'use strict';
 
+  /*
+   * Main entry point and namespace for the app
+   */
   Module('App')({
+
+    // Namespaces for objects
     Components: {},
     Factories: {},
     Systems : {},
     Nodes : {},
     Util : {},
-    _looping : false,
-    _t : 0,
-    _fps : 25,
+
+    // Properties
+    _looping : false,  // Control loop state
+    _t : 0, // Temp store for the time for diff calculation
+    _fps : 25, // Target fps
+
     init : function init() {
       this.engine = new Serpentity();
 
@@ -20,15 +28,25 @@
       this.startLoop();
     },
 
+    /*
+     * Stops the game loop.
+     */
     pauseLoop : function pauseLoop() {
       this._looping = false;
     },
 
+    /*
+     * Starts the game loop.
+     */
     startLoop : function startLoop() {
       this._looping = true;
       window.requestAnimationFrame(this._loop.bind(this));
     },
 
+    /*
+     * Game Loop, requests animation frame and waits for interval to
+     * enforce fps. Calls serpentity update on each loop.
+     */
     _loop : function update() {
       var interval, delta, now;
 
