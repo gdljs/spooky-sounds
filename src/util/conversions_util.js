@@ -1,6 +1,10 @@
 (function (){
   'use strict';
 
+  /*
+   * Module with a bunch of util functions to map midi values to more
+   * useful scales.
+   */
   Module(App.Util, 'ConversionsUtil')({
 
     // given a value 0-127, returns true or false (RECOMMENDED FOR BUTTONS)
