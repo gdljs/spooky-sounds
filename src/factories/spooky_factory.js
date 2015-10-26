@@ -3,11 +3,15 @@
 
   /* globals BufferLoader */
 
+  /*
+   * Factory for the main types of spooky object used by the app.
+   */
   Module(App.Factories, 'SpookyFactory')({
     _context : null,
 
     /*
-     * Creates a microphone audio node by calling getUserMedia.
+     * Creates a test entity that has a configuration object and a midi map
+     * It receives a map object. (See the midi_mapper system for more info)
      */
     createConfigurableMidiMap : function createConfigurableMidiMap(engine, map) {
       var entity;
@@ -24,6 +28,12 @@
       return entity;
     },
 
+    /*
+     * Creates an entity that has playback properties, trigger, midi map
+     * and an audio bank. Used for background playing. The config should have
+     * a map key containing the midi map object, as well as a files array
+     * with the paths to the files to load.
+     */
     createTriggerableSample : function createTriggerableSample(engine, config) {
       return new Promise(function (resolve) {
         var context, entity, bufferLoader;
@@ -45,6 +55,12 @@
       }.bind(this));
     },
 
+    /*
+     * Creates an entity that has playback properties, playback state, midi map
+     * and an audio bank. Used for background playing. The config should have
+     * a map key containing the midi map object, as well as a files array
+     * with the paths to the files to load
+     */
     createToggleableSample : function createToggleableSample(engine, config) {
       return new Promise(function (resolve) {
         var context, entity, bufferLoader;
