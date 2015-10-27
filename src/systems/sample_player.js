@@ -38,7 +38,6 @@
         var source, panNode;
 
         source = this.context.createBufferSource();
-        console.log(sample.audioBank.currentSample);
         source.buffer = sample.audioBank.buffers[sample.audioBank.currentSample];
         source.playbackRate.value = sample.playbackProperties.pitch;
 
