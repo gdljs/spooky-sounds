@@ -7,17 +7,24 @@
    */
   Module(App.Util, 'ConversionsUtil')({
 
-    // given a value 0-127, returns true or false (RECOMMENDED FOR BUTTONS)
+    /*
+     * given a value 0-127, returns true or false (RECOMMENDED FOR
+     * NON-VELO BUTTONS)
+     */
     midiToBoolean : function (value) {
       return !!(value);
     },
 
-    // given a value 0-127 convert to range between -1 to 1
+    /*
+     * given a value 0-127 convert to range between -1 to 1
+     */
     midiToPan : function (value) {
       return Math.round(App.Util.ConversionsUtil.scale(2, -1, value));
     },
 
-    // given a value 0-127 convert to range between 0.1 and 10 (1/10x & 10x)
+    /*
+     * given a value 0-127 convert to range between 0.5 and 3 (1/2x & 3x)
+     */
     midiToPitch : function (value) {
       var scaled;
 
@@ -26,6 +33,10 @@
       return Math.round(scaled * 100) / 100;
     },
 
+    /*
+     * given a value 0-127 and an axis, it will return a range between
+     * 0 and the width/height according to axis.
+     */
     midiToPosition : function (axis, value) {
       var result;
 
@@ -40,14 +51,18 @@
       return Math.round(result);
     },
 
-    // given a value 0-127 convert to range between -n to n (int)
+    /*
+     * given a value 0-127 convert to range between -n to n (int)
+     */
     midiToIntScale : function (n, value) {
       return Math.round(App.Util.ConversionsUtil.scale(n, 0, value));
     },
 
-    // arbitrary scaling
-    // scaleSize - Size of target scale
-    // offset - offset from 0
+    /*
+     * arbitrary scaling
+     * scaleSize - Size of target scale
+     * offset - offset from 0
+     */
     scale : function scale(scaleSize, offset, value) {
       var delta;
 

@@ -66,7 +66,9 @@
       }
     },
 
-    // Adds the systems to serpentity so they can be used
+    /*
+     * Adds the systems to serpentity so they can be used
+     */
     _initializeSystems : function initializeSystems() {
       this.engine.addSystem(new App.Systems.MIDIMapper());
       this.engine.addSystem(new App.Systems.SamplePlayer());
@@ -75,8 +77,9 @@
       this.engine.addSystem(new App.Systems.LightningRenderer());
     },
 
-    // Calls to the entity factory to create all initial
-    // entities
+    /*
+     * to the entity factory to create all initial entities
+     */
     _initializeEntities : function initializeEntities() {
       this.Factories.MIDIFactory.createMIDIContainer(this.engine);
       this._createSampleEntities();
@@ -85,7 +88,9 @@
       this._createLightning();
     },
 
-    // Create the sampling entities.
+    /*
+     * Create the sampling entities.
+     */
     _createSampleEntities : function () {
       this.Factories.SpookyFactory.createTriggerableSample(this.engine, {
         map: [
@@ -352,7 +357,9 @@
       });
     },
 
-    // Creates toggle background playing entities
+    /*
+     * Creates toggle background playing entities
+     */
     _createBackgroundEntities : function () {
       this.Factories.SpookyFactory.createToggleableSample(this.engine, {
         map: [
@@ -663,7 +670,9 @@
       });
     },
 
-    // Creates two entities representing a ghost
+    /*
+     * Creates two entities representing a ghost
+     */
     _createGhost : function _createGhost() {
       this.Factories.SpookyFactory.createTriggerableSample(this.engine, {
         map: [
@@ -754,6 +763,9 @@
       });
     },
 
+    /*
+     * Creates two entities representing lightning
+     */
     _createLightning : function _createLightning() {
       this.Factories.SpookyFactory.createTriggerableSample(this.engine, {
         map: [

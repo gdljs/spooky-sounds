@@ -41,7 +41,8 @@
       },
 
       /*
-       * Plays a sample.
+       * Plays a sample by creating the buffer, assigning
+       * a pan node and sending it to the audio context destination
        */
       _playSample : function _playSample(sample) {
         var source, panNode;
@@ -62,6 +63,9 @@
         source.start();
       },
 
+      /*
+       * Calls the stop method and removes reference
+       */
       _stopSample : function _stopSample(sample) {
         if (sample.playbackStatus.node) {
           sample.playbackStatus.node.stop();

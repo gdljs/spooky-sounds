@@ -32,7 +32,8 @@
       },
 
       /*
-       * Plays a sample by creating the buffer source and attaching nodes.
+       * Plays a sample by creating the buffer, assigning
+       * a pan node and sending it to the audio context destination
        */
       _playSample : function _playSample(sample) {
         var source, panNode;

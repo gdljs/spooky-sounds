@@ -83,6 +83,12 @@
       }.bind(this));
     },
 
+    /*
+     * Creates an entity that has position, scale, trigger, midi map
+     * and an image. Used to flash images. The config should have
+     * a map key containing the midi map object, as well as an image key
+     * with the path to the file to load.
+     */
     createTriggerableImage : function createTriggerableImage(engine, config) {
       return new Promise(function (resolve) {
         var entity;
@@ -105,6 +111,10 @@
       }.bind(this));
     },
 
+    /*
+     * Creates an entity that has intensity, trigger, and midi map
+     * Used to trigger the lightning effect.
+     */
     createLightning : function createLightning(engine, config) {
       return new Promise(function (resolve) {
         var entity;
@@ -123,7 +133,9 @@
       }.bind(this));
     },
 
-    // When all buffers are loaded set them to an audio bank
+    /*
+     * When all buffers are loaded set them to an audio bank
+     */
     _onBuffersLoaded : function _onBuffersLoaded (engine, entity, callback, buffers) {
       entity.addComponent(new App.Components.AudioBank({
         buffers: buffers
@@ -133,7 +145,10 @@
       callback(entity);
     },
 
-    // Gets or instantiates context
+    /*
+     * Don't create audio contexts all willy nilly, reuse if possible,
+     * thank you.
+     */
     _getContext : function _getContext() {
       this._context = this._context || new AudioContext();
       return this._context;
