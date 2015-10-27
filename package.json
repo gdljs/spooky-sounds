@@ -1,6 +1,6 @@
 {
   "name": "spooky-sounds",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A spooky soundboard tool",
   "scripts": {
     "test": "mocha --recursive"
