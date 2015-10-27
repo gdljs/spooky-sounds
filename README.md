@@ -60,6 +60,13 @@ These are the midi mappings as of v1.0.1
 
 ![MIDI Mappings][midi-mappings]
 
+## Ideas for Improvements
+
+* Create entities from a config! (Clean up the app)
+* Create an image bank for the ghost
+* Alter delay / reverb / velocity
+* ??? YOUR IDEA HERE ???
+
 [night-time-storm]: http://soundbible.com/2090-Night-Time-Storm.html
 [mummy-zombie]: http://soundbible.com/1059-Mummy-Zombie.html
 [ghost-picture]: https://flic.kr/p/agKkxD
