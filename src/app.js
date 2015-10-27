@@ -130,6 +130,226 @@
           '/samples/trigger/zombie.mp3'
         ]
       });
+
+      this.Factories.SpookyFactory.createTriggerableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 50
+            },
+            target: {
+              component: App.Components.Trigger,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 18
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 2
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/trigger/door.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createTriggerableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 52
+            },
+            target: {
+              component: App.Components.Trigger,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 19
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 3
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/trigger/knives.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createTriggerableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 53
+            },
+            target: {
+              component: App.Components.Trigger,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 20
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 4
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/trigger/monster.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createTriggerableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 55
+            },
+            target: {
+              component: App.Components.Trigger,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 16
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 0
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/trigger/suspense.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createTriggerableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 57
+            },
+            target: {
+              component: App.Components.Trigger,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 18
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 2
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/trigger/witches.mp3'
+        ]
+      });
     },
 
     // Creates toggle background playing entities
@@ -175,6 +395,270 @@
         ],
         files: [
           '/samples/bg/rain-night.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createToggleableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 51
+            },
+            target: {
+              component: App.Components.PlaybackStatus,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 17
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 1
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/bg/rain.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createToggleableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 54
+            },
+            target: {
+              component: App.Components.PlaybackStatus,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 17
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 1
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/bg/ambiance.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createToggleableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 56
+            },
+            target: {
+              component: App.Components.PlaybackStatus,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 17
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 1
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/bg/chains.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createToggleableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 58
+            },
+            target: {
+              component: App.Components.PlaybackStatus,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 17
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 1
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/bg/raven.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createToggleableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 61
+            },
+            target: {
+              component: App.Components.PlaybackStatus,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 17
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 1
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/bg/water.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createToggleableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 63
+            },
+            target: {
+              component: App.Components.PlaybackStatus,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 17
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 1
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/bg/wolves.mp3'
         ]
       });
     },
@@ -289,7 +773,7 @@
             source: {
               controller: 'nanoKONTROL2 SLIDER/KNOB',
               channel: 176,
-              note: 6
+              note: 5
             },
             target: {
               component: App.Components.AudioBank,
@@ -332,8 +816,6 @@
             }
           }
         ]
-      }).then(function (entity) {
-        window.image = entity;
       });
     }
   });
