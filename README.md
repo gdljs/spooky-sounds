@@ -23,7 +23,9 @@ here's the who's who of spooky audio design:
 * `samples/bg/rain-night.mp3` [Night Time Storm][night-time-storm] By Natboy
 * `samples/trigger/zombie.mp3` [Mummy Zombie][mummy-zombie] By Mike
   Koenig
-* `samples/trigger/ghost.mp3` [Knife Scrape Horror][knife-scrape] By
+* `samples/trigger/ghost.mp3` [Scary Scream][scary-scream] By
+  rutgermuller
+* `samples/trigger/knives.mp3` [Knife Scrape Horror][knife-scrape] By
   Mike Koenig
 * `samples/trigger/thunder1.mp3` [Thunder HD][thunder-1] By Mark DiAngelo
 * `samples/trigger/thunder2.mp3` [Thunder][thunder-3] By Mike Koenig
@@ -46,3 +48,4 @@ and slightly modified by me.
 [thunder-1]: http://soundbible.com/1913-Thunder-HD.html
 [thunder-3]: http://soundbible.com/2016-Thunder-Strike-2.html
 [thunder-4]: http://soundbible.com/2015-Thunder-Strike-1.html
+[scary-scream]: http://soundbible.com/1548-Scary-Scream.html
