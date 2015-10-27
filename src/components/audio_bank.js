@@ -3,7 +3,8 @@
 
   Class(App.Components, 'AudioBank').inherits(Serpentity.Component)({
     prototype : {
-      buffers: null
+      buffers: null,
+      currentSample: 0
     }
   });
 }());

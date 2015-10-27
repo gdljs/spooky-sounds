@@ -82,6 +82,46 @@
       }.bind(this));
     },
 
+    createTriggerableImage : function createTriggerableImage(engine, config) {
+      return new Promise(function (resolve) {
+        var entity;
+
+        entity = new Serpentity.Entity();
+        entity.addComponent(new Serpentity.Contrib.Components.Position());
+        entity.addComponent(new App.Components.Scale());
+        entity.addComponent(new App.Components.Trigger());
+        entity.addComponent(new App.Components.MIDIMap({
+          map: config.map
+        }));
+        entity.addComponent(new App.Components.Image({
+          image: config.image
+        }));
+
+        engine.addEntity(entity);
+
+        resolve(entity);
+
+      }.bind(this));
+    },
+
+    createLightning : function createLightning(engine, config) {
+      return new Promise(function (resolve) {
+        var entity;
+
+        entity = new Serpentity.Entity();
+        entity.addComponent(new App.Components.Intensity());
+        entity.addComponent(new App.Components.Trigger());
+        entity.addComponent(new App.Components.MIDIMap({
+          map: config.map
+        }));
+
+        engine.addEntity(entity);
+
+        resolve(entity);
+
+      }.bind(this));
+    },
+
     // When all buffers are loaded set them to an audio bank
     _onBuffersLoaded : function _onBuffersLoaded (engine, entity, callback, buffers) {
       entity.addComponent(new App.Components.AudioBank({

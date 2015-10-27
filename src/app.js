@@ -71,12 +71,22 @@
       this.engine.addSystem(new App.Systems.MIDIMapper());
       this.engine.addSystem(new App.Systems.SamplePlayer());
       this.engine.addSystem(new App.Systems.BackgroundPlayer());
+      this.engine.addSystem(new App.Systems.GhostRenderer());
+      this.engine.addSystem(new App.Systems.LightningRenderer());
     },
 
     // Calls to the entity factory to create all initial
     // entities
     _initializeEntities : function initializeEntities() {
       this.Factories.MIDIFactory.createMIDIContainer(this.engine);
+      this._createSampleEntities();
+      this._createBackgroundEntities();
+      this._createGhost();
+      this._createLightning();
+    },
+
+    // Create the sampling entities.
+    _createSampleEntities : function () {
       this.Factories.SpookyFactory.createTriggerableSample(this.engine, {
         map: [
           {
@@ -120,7 +130,10 @@
           '/samples/trigger/zombie.mp3'
         ]
       });
+    },
 
+    // Creates toggle background playing entities
+    _createBackgroundEntities : function () {
       this.Factories.SpookyFactory.createToggleableSample(this.engine, {
         map: [
           {
@@ -163,8 +176,176 @@
         files: [
           '/samples/bg/rain-night.mp3'
         ]
+      });
+    },
+
+    // Creates two entities representing a ghost
+    _createGhost : function _createGhost() {
+      this.Factories.SpookyFactory.createTriggerableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 72
+            },
+            target: {
+              component: App.Components.Trigger,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 23
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pan',
+              value: App.Util.ConversionsUtil.midiToPan
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 7
+            },
+            target: {
+              component: App.Components.PlaybackProperties,
+              key: 'pitch',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          }
+        ],
+        files: [
+          '/samples/trigger/ghost.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createTriggerableImage(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 72
+            },
+            target: {
+              component: App.Components.Trigger,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 7
+            },
+            target: {
+              component: App.Components.Scale,
+              key: 'scale',
+              value: App.Util.ConversionsUtil.midiToPitch
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 23
+            },
+            target: {
+              component: Serpentity.Contrib.Components.Position,
+              key: 'x',
+              value: App.Util.ConversionsUtil.midiToPosition.bind(null, 'x')
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 22
+            },
+            target: {
+              component: Serpentity.Contrib.Components.Position,
+              key: 'y',
+              value: App.Util.ConversionsUtil.midiToPosition.bind(App.Util.ConversionsUtil, 'y')
+            }
+          }
+        ],
+        image: '/images/ghost.png'
       }).then(function (entity) {
-        window.entity = entity;
+        window.image = entity;
+      });
+    },
+
+    _createLightning : function _createLightning() {
+      this.Factories.SpookyFactory.createTriggerableSample(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 71
+            },
+            target: {
+              component: App.Components.Trigger,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 6
+            },
+            target: {
+              component: App.Components.AudioBank,
+              key: 'currentSample',
+              value: App.Util.ConversionsUtil.midiToIntScale.bind(null, 3)
+            }
+          }
+        ],
+        files: [
+          '/samples/trigger/thunder1.mp3',
+          '/samples/trigger/thunder2.mp3',
+          '/samples/trigger/thunder3.mp3',
+          '/samples/trigger/thunder4.mp3'
+        ]
+      });
+
+      this.Factories.SpookyFactory.createLightning(this.engine, {
+        map: [
+          {
+            source: {
+              controller: 'QuNexus Port 1',
+              channel: 144,
+              note: 71
+            },
+            target: {
+              component: App.Components.Trigger,
+              key: 'armed',
+              value: App.Util.ConversionsUtil.midiToBoolean
+            }
+          },
+          {
+            source: {
+              controller: 'nanoKONTROL2 SLIDER/KNOB',
+              channel: 176,
+              note: 6
+            },
+            target: {
+              component: App.Components.Intensity,
+              key: 'intensity'
+            }
+          }
+        ]
+      }).then(function (entity) {
+        window.image = entity;
       });
     }
   });
