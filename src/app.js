@@ -808,7 +808,7 @@
             source: {
               controller: 'nanoKONTROL2 SLIDER/KNOB',
               channel: 176,
-              note: 6
+              note: 5
             },
             target: {
               component: App.Components.Intensity,
