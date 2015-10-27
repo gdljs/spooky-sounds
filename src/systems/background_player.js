@@ -23,13 +23,13 @@
           if (sample.playbackStatus.armed && !sample.playbackStatus.locked) {
             sample.playbackStatus.locked = true;
 
-            if (this.playing) {
-              this.playing = false;
+            if (sample.playbackStatus.playing) {
+              sample.playbackStatus.playing = false;
               this._stopSample(sample);
               continue;
             }
 
-            this.playing = true;
+            sample.playbackStatus.playing = true;
             this._playSample(sample);
             continue;
           }
