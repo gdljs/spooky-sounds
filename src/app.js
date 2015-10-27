@@ -206,18 +206,6 @@
               key: 'pan',
               value: App.Util.ConversionsUtil.midiToPan
             }
-          },
-          {
-            source: {
-              controller: 'nanoKONTROL2 SLIDER/KNOB',
-              channel: 176,
-              note: 7
-            },
-            target: {
-              component: App.Components.PlaybackProperties,
-              key: 'pitch',
-              value: App.Util.ConversionsUtil.midiToPitch
-            }
           }
         ],
         files: [
