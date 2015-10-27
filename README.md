@@ -1,6 +1,6 @@
 # Spooky Sounds
 
-Entity Component System for playing spooky sounds.
+Entity Component System demo for playing spooky sounds.
 
 
 ## Running
@@ -11,7 +11,7 @@ Just `npm install` and serve!
 
 * A MIDI Controller
 * Chrome
-* a sample called test.mp3 in `samples/`
+* A way to serve files (For example: `python -m SimpleHTTPServer`)
 
 ## Credits!
 
@@ -46,7 +46,7 @@ here's the who's who of spooky audio design:
   Maximilien
 * `samples/trigger/witches.mp3` [Maniacal Witches][witches] By Mike
   Koenig
-* [NOTE: Add names as samples are committed]
+* [NOTE: Add credits as samples are committed]
 
 ### Images
 
