@@ -19,12 +19,16 @@
 
     <!-- Components -->
     <script src="/node_modules/serpentity-contrib/components/configuration.js"></script>
+    <script src="/node_modules/serpentity-contrib/components/position.js"></script>
     <script src="/src/components/midi_access.js"></script>
     <script src="/src/components/midi_map.js"></script>
     <script src="/src/components/audio_bank.js"></script>
     <script src="/src/components/playback_properties.js"></script>
     <script src="/src/components/trigger.js"></script>
     <script src="/src/components/playback_status.js"></script>
+    <script src="/src/components/image.js"></script>
+    <script src="/src/components/scale.js"></script>
+    <script src="/src/components/intensity.js"></script>
 
     <!-- Nodes -->
     <script src="/node_modules/serpentity-contrib/nodes/configurable.js"></script>
@@ -32,12 +36,16 @@
     <script src="/src/nodes/midi_mappable.js"></script>
     <script src="/src/nodes/triggerable_sample.js"></script>
     <script src="/src/nodes/toggleable_sample.js"></script>
+    <script src="/src/nodes/triggerable_image.js"></script>
+    <script src="/src/nodes/lightning.js"></script>
 
     <!-- Systems -->
     <script src="/src/systems/midi_mapper.js"></script>
     <script src="/src/systems/configuration_logger.js"></script>
     <script src="/src/systems/sample_player.js"></script>
     <script src="/src/systems/background_player.js"></script>
+    <script src="/src/systems/ghost_renderer.js"></script>
+    <script src="/src/systems/lightning_renderer.js"></script>
 
     <!-- Factories -->
     <script src="/src/factories/midi_factory.js"></script>
@@ -48,8 +56,11 @@
     </script>
     <style>
       * {margin: 0; padding: 0}
-      body {overflow: hidden; background-color: black}
-      svg {width: 100%; height: 100%;}
+      body {
+        overflow: hidden;
+        background-color: black;
+        position: relative;
+      }
     </style>
   </head>
   <body>
