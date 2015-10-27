@@ -9,6 +9,7 @@
   Module(App.Factories, 'SpookyFactory')({
     _context : null,
 
+
     /*
      * Creates a test entity that has a configuration object and a midi map
      * It receives a map object. (See the midi_mapper system for more info)
@@ -38,7 +39,7 @@
       return new Promise(function (resolve) {
         var context, entity, bufferLoader;
 
-        context = new AudioContext();
+        context = this._getContext();
         entity = new Serpentity.Entity();
         bufferLoader = new BufferLoader(context,
                                         config.files,
@@ -65,7 +66,7 @@
       return new Promise(function (resolve) {
         var context, entity, bufferLoader;
 
-        context = new AudioContext();
+        context = this._getContext();
         entity = new Serpentity.Entity();
         bufferLoader = new BufferLoader(context,
                                         config.files,
@@ -130,6 +131,12 @@
       engine.addEntity(entity);
 
       callback(entity);
+    },
+
+    // Gets or instantiates context
+    _getContext : function _getContext() {
+      this._context = this._context || new AudioContext();
+      return this._context;
     }
   });
 }());
