@@ -54,6 +54,12 @@ This project wouldn't be spooky without the cool Ghost Art Doll picture
 at `pictures/ghost.png` taken by flickr user [Shain Erin][ghost-picture]
 and slightly modified by me.
 
+## MIDI Mappings
+
+These are the midi mappings as of v1.0.1
+
+![MIDI Mappings][midi-mappings]
+
 [night-time-storm]: http://soundbible.com/2090-Night-Time-Storm.html
 [mummy-zombie]: http://soundbible.com/1059-Mummy-Zombie.html
 [ghost-picture]: https://flic.kr/p/agKkxD
@@ -72,3 +78,4 @@ and slightly modified by me.
 [monster]: http://soundbible.com/1060-Halloween-Monster.html
 [suspense]: http://soundbible.com/2046-Incoming-Suspense.html
 [witches]: http://soundbible.com/1129-Maniacal-Witches-Laugh.html
+[midi-mappings]: https://cloud.githubusercontent.com/assets/314816/10763072/2c470b62-7c8e-11e5-9b14-59e44c0041ba.png
